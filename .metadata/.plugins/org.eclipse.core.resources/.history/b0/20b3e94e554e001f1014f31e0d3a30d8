@@ -1,0 +1,8 @@
+package com.techlabs.ocp.solution.model;
+
+public interface IFestivalInterest {
+	
+	void getInterestRate();
+	
+
+}

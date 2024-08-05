@@ -1,0 +1,15 @@
+package com.techlabs.facade.model.assignment;
+
+public class GameRule {
+	
+	public boolean checkWin(GameBoard board, char symbol) {
+       
+        return false;
+    }
+
+    public boolean checkDraw(GameBoard board) {
+        
+        return false;
+    }
+
+}

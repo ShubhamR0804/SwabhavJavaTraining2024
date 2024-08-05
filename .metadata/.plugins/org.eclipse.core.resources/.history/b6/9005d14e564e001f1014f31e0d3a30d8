@@ -1,0 +1,12 @@
+package com.techlabs.ocp.solution.model;
+
+public class SimpleInterest {
+
+	private FixedDeposit fixedDeposit;
+	
+	
+
+	public double calculateSimpleInterest() {
+		return (fixedDeposit.getPrincipal()*fixedDeposit.getDuration()*fixedDeposit.getFestival().getInterestRate()) / 100 ;
+	}
+}

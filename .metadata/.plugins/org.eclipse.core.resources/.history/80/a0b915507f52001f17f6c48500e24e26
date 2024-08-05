@@ -1,0 +1,13 @@
+package com.techlabs.facade.test.assignment;
+
+import com.techlabs.facade.model.assignment.TicTacToeGame;
+
+public class TicTacToeTest{
+	
+	public static void main(String[] args) {
+		
+		TicTacToeGame game = new TicTacToeGame("Shubham", "Shivam", false);
+		
+	}
+
+}

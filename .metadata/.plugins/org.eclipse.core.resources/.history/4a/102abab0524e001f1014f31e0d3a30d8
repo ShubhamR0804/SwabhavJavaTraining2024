@@ -1,0 +1,21 @@
+package com.techlabs.ocp.violation.model;
+
+public class SimpleInterest {
+
+	private FixedDeposit fixedDeposit;
+	private FestivalType festival;
+	
+	
+	public SimpleInterest(FixedDeposit fixedDeposit, FestivalType festival) {
+		super();
+		this.fixedDeposit = fixedDeposit;
+		this.festival = festival;
+	}
+
+
+
+
+	public double calculateSimpleInterest() {
+		return (fixedDeposit.getPrincipal()*fixedDeposit.getDuration()*festival.getInterestRate()) / 100 ;
+	}
+}

@@ -1,0 +1,21 @@
+package com.techlabs.ocp.solution.model;
+
+public class DiwaliInterest implements IFestivalInterest {
+
+	private double principal;
+	private int duration;
+
+	public DiwaliInterest(double principal, int duration) {
+		super();
+		this.duration = duration;
+		this.principal = principal;
+
+	}
+
+	@Override
+	public void getInterestRate() {
+		System.out.println("Simple Interest Considering rates while diwali" +(principal*duration*7.5)/100);
+
+	}
+
+}

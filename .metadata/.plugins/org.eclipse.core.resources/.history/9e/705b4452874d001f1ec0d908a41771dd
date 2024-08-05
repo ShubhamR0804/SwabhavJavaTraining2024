@@ -1,0 +1,27 @@
+package com.techlabs.test;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class NewTest {
+	public static void main(String[] args) {
+		List<Integer> numbers = Arrays.asList(10,20,35,45,55);
+		
+		numbers.stream()
+		.forEach((number) -> System.out.println(number));
+		 
+		List<Integer> filteredNumbers = numbers.stream()
+		.filter((number)->(number%2 != 0))
+		.filter((number) -> (number>35))
+		.collect(Collectors.toList());
+		
+		
+		
+		List<Integer> squareNumber = numbers.stream()
+				.map((number)-> number*number)
+				.collect(Collectors.toList());
+
+}
+}

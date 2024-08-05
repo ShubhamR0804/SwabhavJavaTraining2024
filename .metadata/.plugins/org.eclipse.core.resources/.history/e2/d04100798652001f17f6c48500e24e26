@@ -1,0 +1,45 @@
+package com.techlabs.facade.model.assignment;
+
+public class TicTacToeGame {
+	
+	private Player playerX;
+	private Player playerO;
+	private Player currentPlayer;
+	private GameBoard gameBoard;
+	public Player getCurrentPlayer() {
+		return currentPlayer;
+	}
+	public void setCurrentPlayer(Player currentPlayer) {
+		this.currentPlayer = currentPlayer;
+	}
+
+	private GameRule gameRule;
+	public TicTacToeGame(Player playerX, Player playerO, boolean playerXStarts) {
+		
+		this.playerX = playerX;
+		this.playerO = playerO;
+		currentPlayer = playerXStarts ? playerX : playerO;
+		this.gameBoard = new GameBoard();
+		this.gameRule = new GameRule();
+	}
+	 public void makeMove(int row, int col) {
+		 gameBoard.move(row, col, currentPlayer.getName().charAt(0));
+	        currentPlayer = (currentPlayer == playerX) ? playerO : playerX;
+	    }
+
+	    public void displayBoard() {
+	    	gameBoard.displayGameBoard();
+	    }
+
+	    public boolean checkWin() {
+	        return gameRule.checkWin(gameBoard, currentPlayer.getName().charAt(0));
+	    }
+
+	    public boolean checkDraw() {
+	        return gameRule.checkDraw(gameBoard);
+	    }
+	
+	
+	
+
+}

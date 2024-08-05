@@ -1,0 +1,23 @@
+package com.techlabs.facade.model.assignment;
+
+public class TicTacToeGame {
+	
+	private Player playerX;
+	private Player playerO;
+	private Player currentPlayer;
+	private GameBoard gameBoard;
+	private GameRule gameRule;
+	public TicTacToeGame(Player playerX, Player playerO, boolean playerXStarts) {
+		
+		this.playerX = playerX;
+		this.playerO = playerO;
+		currentPlayer = playerXStarts ? playerX : playerO;
+		this.gameBoard = gameBoard;
+		this.gameRule = gameRule;
+	}
+	
+	
+	
+	
+
+}

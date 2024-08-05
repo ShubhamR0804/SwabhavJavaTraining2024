@@ -1,0 +1,28 @@
+package com.techlabs.facade.model.assignment;
+
+public class GameBoard {
+
+	private char[][] grid;
+
+	public char[][] getGrid() {
+		return grid;
+	}
+
+	public void setGrid(char[][] grid) {
+		this.grid = grid;
+	}
+
+	public GameBoard() {
+		grid = new char[3][3];
+	}
+
+	public void move(int row, int column, char symbol) {
+		grid[row][column] = symbol;
+	}
+
+	public void displayGameBoard() {
+		for (char[] row : grid) {
+            System.out.println(new String(row));
+        }
+	}
+}

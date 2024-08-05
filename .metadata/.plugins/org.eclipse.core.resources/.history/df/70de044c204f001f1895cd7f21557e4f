@@ -1,0 +1,18 @@
+package com.techlabs.creational.factory.test;
+
+import com.techlabs.creational.factory.model.ICar;
+import com.techlabs.creational.factory.model.Mahindra;
+import com.techlabs.creational.factory.model.Maruti;
+import com.techlabs.creational.factory.model.Tata;
+import com.techlabs.creational.factory.model.CarFactory;
+public class CarTest {
+
+	public static void main(String[] args) {
+		
+		CarFactory carFactory = new CarFactory();
+		carFactory.makeCar("Maruti");
+		System.out.println(carFactory);
+		
+	}
+
+}

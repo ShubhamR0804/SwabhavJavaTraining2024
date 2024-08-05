@@ -1,0 +1,5 @@
+package com.techlabs.facade.model.assignment;
+
+public class Player {
+
+}

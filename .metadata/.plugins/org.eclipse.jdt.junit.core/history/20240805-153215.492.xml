@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StudentTest1" project="24_DummyObjects" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.techlabs.model.StudentTest1" time="0.0" displayname="StudentTest1" uniqueid="[engine:junit-jupiter]/[class:com.techlabs.model.StudentTest1]">
+    <testcase name="testCalculatePercentage" classname="com.techlabs.model.StudentTest1" time="0.0" displayname="testCalculatePercentage()" uniqueid="[engine:junit-jupiter]/[class:com.techlabs.model.StudentTest1]/[method:testCalculatePercentage()]">
+      <error>java.lang.NullPointerException&#13;
+	at com.techlabs.model.StudentTest1.testCalculatePercentage(StudentTest1.java:21)&#13;
+	at java.lang.reflect.Method.invoke(Method.java:498)&#13;
+	at java.util.ArrayList.forEach(ArrayList.java:1257)&#13;
+	at java.util.ArrayList.forEach(ArrayList.java:1257)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

@@ -1,0 +1,10 @@
+package com.techlabs.model;
+
+import org.mockito.Mockito;
+
+public class StudentTest {
+
+	
+
+	
+}

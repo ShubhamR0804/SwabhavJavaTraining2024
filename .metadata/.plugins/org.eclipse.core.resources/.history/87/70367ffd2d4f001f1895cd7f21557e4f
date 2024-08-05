@@ -1,0 +1,9 @@
+package com.techlabs.creational.abstractfactory.model;
+
+public class SavingsFactory implements AccountFactory {
+
+	@Override
+	public IAccount makeAccount(String accountHolder, long accountNumber, double balance, double interestRate) {
+		return new SavingsAccount(accountHolder, accountNumber, balance, interestRate);
+	}
+}

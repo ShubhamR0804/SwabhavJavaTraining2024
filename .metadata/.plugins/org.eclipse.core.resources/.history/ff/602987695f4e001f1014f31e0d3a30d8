@@ -1,0 +1,13 @@
+package com.techlabs.dip.violation.test;
+
+public class TaxCalculatorTest {
+	 public static void main(String[] args) {
+	        DBLogger dbLogger = new DBLogger();
+	        TaxCalculator taxCalculator1 = new TaxCalculator(dbLogger);
+	        System.out.println("Tax: " + taxCalculator1.calculateTax(100, 10));
+
+	        TaxCalculator taxCalculator2 = new TaxCalculator(dbLogger);
+	        System.out.println("Tax: " + taxCalculator2.calculateTax(2000, 0));
+	    }
+
+}

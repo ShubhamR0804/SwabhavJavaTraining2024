@@ -1,0 +1,9 @@
+package com.techlabs.facade.model;
+
+public class Client {
+	public static void main(String[] args) {
+        HotelFacade facade = new HotelFacade();
+        facade.showIndianMenu();
+        facade.showItalianMenu();
+    }
+}

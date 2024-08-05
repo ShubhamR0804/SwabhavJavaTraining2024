@@ -1,0 +1,20 @@
+package com.techlabs.creational.factory.test;
+
+public class CarTest {
+	
+	public static void main(String[] args) {
+		 ICar maruti = new Maruti();
+	        ICar tata = new Tata();
+	        ICar mahindra = new Mahindra();
+
+	        maruti.start();
+	        maruti.stop();
+
+	        tata.start();
+	        tata.stop();
+
+	        mahindra.start();
+	        mahindra.stop();
+	}
+
+}

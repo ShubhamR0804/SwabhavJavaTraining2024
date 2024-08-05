@@ -1,0 +1,44 @@
+package com.techlabs.facade.test.assignment;
+
+import java.util.Scanner;
+
+import com.techlabs.facade.model.assignment.Player;
+import com.techlabs.facade.model.assignment.TicTacToeGame;
+
+public class TicTacToeTest{
+	
+	public void testGame() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Player X's name: ");
+        String playerXName = scanner.nextLine();
+        Player playerX = new Player(playerXName);
+
+        System.out.print("Enter Player O's name: ");
+        String playerOName = scanner.nextLine();
+        Player playerO = new Player(playerOName);
+
+        System.out.print("Who starts first? (X or O): ");
+        String startingPlayer = scanner.nextLine();
+        boolean playerXStarts = startingPlayer.equalsIgnoreCase("X");
+
+        TicTacToeGame game = new TicTacToeGame(playerX, playerO, playerXStarts);
+
+        while (true) {
+            game.displayBoard();
+            System.out.print(game.getCurrentPlayer().getName() + ", enter row (0-2): ");
+            int row = scanner.nextInt();
+            System.out.print(game.getCurrentPlayer().getName() + ", enter column (0-2): ");
+            int col = scanner.nextInt();
+
+            game.makeMove(row, col);
+
+            if (game.checkWin()) {
+                System.out.println("Player " + game.getCurrentPlayer().getName() + " wins!");
+                break;
+            } else if (game.checkDraw()) {
+                System.out.println("It's a draw!");
+                break;
+            }
+        }
+}

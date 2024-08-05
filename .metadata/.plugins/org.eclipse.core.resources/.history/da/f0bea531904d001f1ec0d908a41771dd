@@ -1,0 +1,25 @@
+package com.techlabs.test;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
+import com.techlabs.model.Account;
+
+public class AccountTest {
+	
+	public static void main(String[] args) {
+		
+		List<Account> accounts = Arrays.asList(
+					 		     new Account(1,"Shubham",5000),
+					 		     new Account(2,"Parag",4000),
+					 		     new Account(3,"Bhakti",3000),
+					 		     new Account(4,"Gaurav",6000));
+		
+		Optional<Account> minimumBalanceAccount = accounts.stream().min(Comparator.comparingDouble(Account::getBalance));
+		
+		
+	}
+
+}

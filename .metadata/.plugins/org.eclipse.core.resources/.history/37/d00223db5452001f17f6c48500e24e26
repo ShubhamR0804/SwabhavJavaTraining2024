@@ -1,0 +1,15 @@
+package com.techlabs.facade.model.assignment;
+
+public class GameRule {
+	
+	public boolean checkWin(Board board, char symbol) {
+        // Check for a win (3 in a row horizontally, vertically, or diagonally)
+        return false;
+    }
+
+    public boolean checkDraw(Board board) {
+        // Check for a draw (all cells filled without a win)
+        return false;
+    }
+
+}

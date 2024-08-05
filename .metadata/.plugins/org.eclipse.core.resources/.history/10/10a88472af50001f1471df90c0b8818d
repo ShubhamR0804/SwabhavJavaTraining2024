@@ -1,0 +1,12 @@
+package com.techlabs.observer.test;
+
+import com.techlabs.observer.model.Account;
+
+public class AccountNotifierTest {
+	
+	public static void main(String[] args) {
+		Account account = new Account(1,"Shubham", 100000);
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.techlabs.facade.model.assignment;
+import com.techlabs.facade.model.assignment.*;
+
+public class GameRule {
+
+	public boolean checkWin(GameBoard board, char symbol) {
+
+		for (int i = 0; i < 3; i++) {
+            if (board.grid[i][0] == symbol && board.grid[i][1] == symbol && board.grid[i][2] == symbol) {
+                return true; // Horizontal win
+            }
+            if (board.grid[0][i] == symbol && board.grid[1][i] == symbol && board.grid[2][i] == symbol) {
+                return true; // Vertical win
+            }
+        }
+        if (board.grid[0][0] == symbol && board.grid[1][1] == symbol && board.grid[2][2] == symbol) {
+            return true; // Diagonal win (top-left to bottom-right)
+        }
+        if (board.grid[0][2] == symbol && board.grid[1][1] == symbol && board.grid[2][0] == symbol) {
+            return true; // Diagonal win (top-right to bottom-left)
+        }
+        return false;
+	}
+
+	public boolean checkDraw(GameBoard board) {
+
+		return false;
+	}
+
+}
